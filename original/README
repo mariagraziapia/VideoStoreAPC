@@ -1,5 +1,7 @@
 The First Step in Refactoring
 
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 Whenever I do refactoring, the first step is always the same. I need
 to build a solid set of tests for that section of code. The tests are
 essential because even though I follow refactorings structured to
