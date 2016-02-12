@@ -1,14 +1,31 @@
-CC=g++
-CFLAGS=-c -Wall
-LDFLAGS=
-SOURCES=Customer.cc Movie.cc Rental.cc RegularPrice.cc NewReleasePrice.cc ChildrensPrice.cc fowler.cc
-OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=fowler
+# Makefile for VideoStore refactoring example
 
-all: $(SOURCES) $(EXECUTABLE)
+CXX        = g++
+LD         = $(CXX)
+OPT        = -g
+
+# Environment variable to be set, where gtest is installed
+# GTESTPATH = /Users/pia/Documents/g4dev/googletest/gtest_install/
+
+GINCS = -I $(GTESTPATH)/include
+GLIBS = -L $(GTESTPATH)/lib -lgtest -lpthread
+
+CXXFLAGS   = -Wall $(OPT) -fPIC $(GINCS)
+
+LDFLAGS    =
+
+SOURCES    = Customer.cc Movie.cc Rental.cc RegularPrice.cc NewReleasePrice.cc ChildrensPrice.cc 
+TESTSRC    = testVideoStore.cc
+OBJECTS    = $(SOURCES:.cc=.o) $(TESTSRC:.cc=.o)
+EXECUTABLE = $(basename $(TESTSRC) )
+
+all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS) 
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+	$(LD) $(LDFLAGS) -o $@ $^ $(GLIBS)
+	LD_LIBRARY_PATH=$(PWD) ./$@
 
-.cpp.o:
-	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	rm -f $(OBJECTS) $(EXECUTABLE)
+

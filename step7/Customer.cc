@@ -6,8 +6,8 @@
 std::string Customer::statement()
 {
   
-  std::vector< Rental >::iterator iter = _rentals.begin();
-  std::vector< Rental >::iterator iter_end = _rentals.end();
+  std::vector< Rental >::iterator iter = customerRentals.begin();
+  std::vector< Rental >::iterator iter_end = customerRentals.end();
   std::ostringstream result;
   result << "Rental Record for " << getName() << "\n";
   for ( ; iter != iter_end; ++iter ) {
@@ -34,8 +34,8 @@ double Customer::amountFor( const Rental& aRental ) const
 double Customer::getTotalCharge()
 {
   double result = 0;
-  std::vector< Rental >::iterator iter = _rentals.begin();
-  std::vector< Rental >::iterator iter_end = _rentals.end();
+  std::vector< Rental >::iterator iter = customerRentals.begin();
+  std::vector< Rental >::iterator iter_end = customerRentals.end();
   for ( ; iter != iter_end; ++iter ) {
     Rental each = *iter;
     result += each.getCharge();
@@ -46,8 +46,8 @@ double Customer::getTotalCharge()
 int Customer::getTotalFrequentRenterPoints()
 {
   int result = 0;
-  std::vector< Rental >::iterator iter = _rentals.begin();
-  std::vector< Rental >::iterator iter_end = _rentals.end();
+  std::vector< Rental >::iterator iter = customerRentals.begin();
+  std::vector< Rental >::iterator iter_end = customerRentals.end();
   for ( ; iter != iter_end; ++iter ) {
     Rental each = *iter;
     result += each.getFrequentRenterPoints();

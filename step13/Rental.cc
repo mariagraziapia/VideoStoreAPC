@@ -3,10 +3,10 @@
 
 double Rental::getCharge() const 
 {
-  return _movie.getCharge( _daysRented );
+  return rentedMovie.getCharge( nDaysRented );
 }
   
 int Rental::getFrequentRenterPoints() const 
 {
-  return _movie.getFrequentRenterPoints( _daysRented ); 
+  return rentedMovie.getFrequentRenterPoints( nDaysRented ); 
 }

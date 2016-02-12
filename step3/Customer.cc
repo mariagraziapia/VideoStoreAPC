@@ -10,8 +10,8 @@ std::string Customer::statement()
 {
   double totalAmount = 0;
   int frequentRenterPoints = 0;
-  std::vector< Rental >::iterator iter = _rentals.begin();
-  std::vector< Rental >::iterator iter_end = _rentals.end();
+  std::vector< Rental >::iterator iter = customerRentals.begin();
+  std::vector< Rental >::iterator iter_end = customerRentals.end();
   std::ostringstream result;
   result << "Rental Record for " << getName() << "\n";
   for ( ; iter != iter_end; ++iter ) {

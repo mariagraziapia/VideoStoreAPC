@@ -26,15 +26,15 @@ public:
   int getFrequentRenterPoints( int daysRented ) const;
 
 private:
-  std::string _title;
-  Price* _price;
+  std::string movieTitle;
+  Price* moviePrice;
 };
 
 inline Movie::~Movie()
 {
-  delete _price;
+  delete moviePrice;
 }
 
-inline std::string Movie::getTitle() const { return _title; }
+inline std::string Movie::getTitle() const { return movieTitle; }
 
 #endif // MOVIE_HH

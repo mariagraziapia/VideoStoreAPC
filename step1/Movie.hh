@@ -16,19 +16,19 @@ public:
   std::string getTitle() const;
 
 private:
-  std::string _title;
-  int _priceCode;
+  std::string movieTitle;
+  int moviePriceCode;
 };
 
 inline Movie::Movie( const std::string& title, int priceCode ): 
-  _title( title ), 
-  _priceCode( priceCode )
+  movieTitle( title ), 
+  moviePriceCode( priceCode )
 {}
 
-inline int Movie::getPriceCode() const { return _priceCode; }
+inline int Movie::getPriceCode() const { return moviePriceCode; }
 
-inline void Movie::setPriceCode( int arg ) { _priceCode = arg; }
+inline void Movie::setPriceCode( int arg ) { moviePriceCode = arg; }
 
-inline std::string Movie::getTitle() const { return _title; }
+inline std::string Movie::getTitle() const { return movieTitle; }
 
 #endif // MOVIE_HH

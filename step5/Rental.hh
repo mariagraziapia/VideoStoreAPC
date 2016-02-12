@@ -13,16 +13,16 @@ public:
   int getFrequentRenterPoints() const;
 
 private:
-  Movie _movie;
-  int _daysRented;
+  Movie rentedMovie;
+  int nDaysRented;
 };
 
 inline Rental::Rental( const Movie& movie, int daysRented ): 
-  _movie( movie ),
-  _daysRented( daysRented ) {}
+  rentedMovie( movie ),
+  nDaysRented( daysRented ) {}
 
-inline int Rental::getDaysRented() const { return _daysRented; }
+inline int Rental::getDaysRented() const { return nDaysRented; }
 
-inline const Movie& Rental::getMovie() const { return _movie; }
+inline const Movie& Rental::getMovie() const { return rentedMovie; }
 
 #endif // RENTAL_HH
