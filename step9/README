@@ -1,5 +1,7 @@
 Replacing the Conditional Logic on Price Code with Polymorphism
 
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 The first part of this problem is that switch statement. It is a bad
 idea to do a switch based on and attribute of another object. If you
 must use a switch statement, it should be on your own data, not on

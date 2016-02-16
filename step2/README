@@ -1,8 +1,10 @@
- I don't like some of the variable names in amountFor, and this is a
- good place to change them.
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
 
- Once I've done the renaming, I compile and test to ensure I haven't
- broken anything.
+I don't like some of the variable names in amountFor, and this is a
+good place to change them.
+
+Once I've done the renaming, I compile and test to ensure I haven't 
+broken anything.
 
 Is renaming worth the effort? Absolutely. Good code should communicate
 what it is doing clearly, and variable names are a key to clear

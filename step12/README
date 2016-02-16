@@ -1,3 +1,5 @@
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 Now I add the new classes. I provide the type code behavior in the
 price object. I do this with an abstract method on price and concrete
 methods in the subclasses.

@@ -1,3 +1,5 @@
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 I can now do the same procedure with getFrequentRenterPoints. 
 
 In this case however, I don't make the superclass method pure

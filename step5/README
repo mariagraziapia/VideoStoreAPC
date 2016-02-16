@@ -1,10 +1,12 @@
 Extracting Frequent Renter Points
 
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 The next step is to do a similar thing for the frequent renter
 points. The rules vary with the tape, although there is less variation
 than with charging. It seems reasonable to put the responsability on
-the rental. First we need to use Extract Method (110) on the frequent
-renter points part of the code (in boldface type).
+the rental. First we need to use Extract Method on the frequent
+renter points part of the code.
 
 Again we look at the use of locally scoped variables. Again each is
 used and can be passed in as a parameter. The other temp used is

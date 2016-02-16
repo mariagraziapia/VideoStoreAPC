@@ -1,3 +1,5 @@
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 I am now at the point where I can take off my refactoring hat and put
 on my adding function hat. I can write htmlStatement as follows and
 add appropriate tests.

@@ -1,3 +1,5 @@
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 After compiling and testing that refactoring, I did the same for 
 frequentRenterPoints.
 
@@ -18,7 +20,7 @@ loop is called often enough for it to affect the overall performance
 of the system. Don't worry about this while refactoring. When you
 optimize you will have to worry about it, but you will be in a much
 better position to do something about it, and you will have more
-options to optimize effectively (see the discussion on page 69).
+options to optimize effectively.
 
 These queries are now available for any code written in the customer
 class. They can easily be added to the interface of the class should

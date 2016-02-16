@@ -1,5 +1,7 @@
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 Once it is moved I can start using Replace Conditional with
-Polymorphism (255).
+Polymorphism.
 
 I do this by taking one leg of the case statement at time and creating
 an overriding method. I start with RegularPrice.

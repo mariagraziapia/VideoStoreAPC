@@ -1,10 +1,12 @@
+(from M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999)
+
 As I look at amountFor, I can see that it uses information from the
 rental, but does not use information from the customer.
 
 This immediately raises my suspicions that the method is on the wrong
 object. In most cases a method should be on the object whose data it
 uses, thus the method should be moved to the rental. To do this I use
-Move Method (142) . With this you first copy the code over to the
+Move Method. With this you first copy the code over to the
 rental, adjust it to fit in its new home, and compile.
 
 In this case fitting into its home means removing the parameter. I
@@ -31,7 +33,7 @@ In this case this step is easy because we just created the method and
 it is in only one place. In general, however, you need to do a "find"
 across all the classes that might be using that method.
 
-When I've made the change (Figure 1.3) the next thing is to remove the old
+When I've made the change, the next thing is to remove the old
 method. The compiler should tell me whether I missed anything. I then
 test to see if I've broken anything.
 
