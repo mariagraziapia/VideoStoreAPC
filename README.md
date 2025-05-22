@@ -1,14 +1,21 @@
-# Hands-on exercise for the Advanced Programming Concepts School, DESY, Hamburg
+# Exercise, Advanced Programming Concepts School, DESY, Hamburg
 
 ## Overview
-This exercise is based on the "Video Store Example" described in Chapter 1 of the book: 
+The exercise concerns Refactoring and Unit Testing.
+
+It is based on the "Video Store Example" described in Chapter 1 of the book: 
 M. Fowler, Refactoring: Improving the Design of Existing Code, Addison-Wesley Professional, 1999.
 
-A more recent edition of the book has been published; nevertheless, the code documented in 
-the first edition is more appropriate to the APC school environment.
+A more recent edition of the book has been published; nevertheless, the example documented in 
+the first edition of the book is more suitable to the APC school environment.
 
-The original code presented in the first edition of the book is written in Java; 
-it has been ported to C++ for this exercise. 
+The original example in the first edition of the book is in Java;  it has been ported to C++ 
+for this exercise and complemented by unit tests using the GoogleTest framework and by 
+UML diagrams using Sparx Enterprise Architect.
+
+The exercise is articulated over 15 steps, which incrementally improve the design of the 
+software by applying refactoring techniques, while verifying at each step that 
+the functionality of the code remains unchanged.
 
 ## Documentation
 
