@@ -25,7 +25,7 @@ LD         = $(CXX)
 OPT        = -g
 
 # Environment variable to be set, where gtest is installed
-GTESTPATH=/usr/local
+# GTESTPATH=/usr/local
 
 ifeq ($(HOSTNAME), naf-school01.desy.de)
     GTESTPATH=/usr

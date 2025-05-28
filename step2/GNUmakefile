@@ -6,7 +6,7 @@ OPT        = -g
 
 # Environment variable to be set, where gtest is installed
 # GTESTPATH = /Users/pia/Documents/g4dev/googletest/gtest_install/
-GTESTPATH=/usr/local
+# GTESTPATH=/usr/local
 
 ifeq ($(HOSTNAME), naf-school01.desy.de)
     GTESTPATH=/usr
