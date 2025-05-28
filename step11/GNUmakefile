@@ -1,5 +1,10 @@
 # Makefile for VideoStore refactoring example
 
+ifndef UNAMEM
+  UNAMEM := $(shell uname -m)
+endif
+$(info '$(UNAMEM)')
+
 CXX        = g++
 LD         = $(CXX)
 OPT        = -g
@@ -17,7 +22,12 @@ ifeq ($(HOSTNAME), naf-school02.desy.de)
 endif
 
 GINCS = -I $(GTESTPATH)/include
-GLIBS = -L $(GTESTPATH)/lib -lgtest -lpthread
+
+ifeq ($(UNAMEM), x86_64)
+	GLIBS = -L $(GTESTPATH)/lib64 -lgtest -lpthread
+else
+	GLIBS = -L $(GTESTPATH)/lib -lgtest -lpthread
+endif
 
 CXXFLAGS   = -std=c++17 -Wall $(OPT) -fPIC $(GINCS)
 
